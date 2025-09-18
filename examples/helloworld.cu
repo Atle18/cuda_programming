@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-__global__ void hello_world_cuda()
+__global__ void helloWorldCuda()
 {
     printf("Hello World CUDA!\n");
 }
 
-int main(void)
+int main()
 {
-    hello_world_cuda<<<1, 1>>>();
+    helloWorldCuda<<<1, 1>>>();
     cudaDeviceSynchronize();
-    
     return 0;
 }
